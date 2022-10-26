@@ -53,7 +53,7 @@ public class Butaca {
 
     @Override
     public String toString() {
-        return "Butaca{" + "numeroDeButaca=" + numeroDeButaca + ", letraButaca=" + letraButaca + ", ocupada=" + ocupada + '}';
+        return "Butaca: " + numeroDeButaca + "-" + letraButaca + " Ocupada: " + ocupada+ " ";
     }
    
    

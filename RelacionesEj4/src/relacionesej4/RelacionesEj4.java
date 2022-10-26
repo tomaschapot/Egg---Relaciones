@@ -5,7 +5,10 @@
  */
 package relacionesej4;
 
+import entidades.Cine;
+import entidades.Espectador;
 import entidades.Sala;
+import java.util.ArrayList;
 import servicios.CineService;
 
 /**
@@ -20,9 +23,20 @@ public class RelacionesEj4 {
     public static void main(String[] args) {
         
         CineService cS = new CineService();
+        ArrayList<Espectador> espectadores = new ArrayList();
         
-        Sala s1 = cS.crearSala();
-        cS.mostrarSala(s1);
+        Cine c1 = cS.crearCine();
+        
+        c1.getSalas().toString();
+        cS.mostrarSala(c1.getSalas().get(0));
+        
+        espectadores = cS.espectadorFabrica();
+        
+        cS.llenarSala(c1, c1.getSalas().get(0), espectadores);
+        
+        cS.mostrarSala(c1.getSalas().get(0));
+        
+        
 
     }
     
