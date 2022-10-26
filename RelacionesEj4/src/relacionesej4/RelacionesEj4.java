@@ -5,6 +5,9 @@
  */
 package relacionesej4;
 
+import entidades.Sala;
+import servicios.CineService;
+
 /**
  *
  * @author tomic
@@ -15,7 +18,12 @@ public class RelacionesEj4 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        
+        CineService cS = new CineService();
+        
+        Sala s1 = cS.crearSala();
+        cS.mostrarSala(s1);
+
     }
     
 }

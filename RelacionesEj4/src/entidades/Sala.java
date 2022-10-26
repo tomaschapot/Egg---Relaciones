@@ -15,7 +15,7 @@ public class Sala {
 
     private Integer cantidadDeFilas;
     private Integer cantidadDeColumnas;
-    private Butaca matrizButacas;
+    private Butaca matrizButacas[][];
     private Integer capacidadMaxima;
     
 
@@ -30,6 +30,7 @@ public class Sala {
         this.cantidadDeColumnas = cantidadDeColumnas;
         this.cantidadDeFilas = cantidadDeFilas;
         capacidadMaxima = cantidadDeFilas * cantidadDeColumnas;
+        matrizButacas = new Butaca[cantidadDeFilas][cantidadDeColumnas];
     }
 
     public Integer getCantidadDeFilas() {
@@ -48,13 +49,15 @@ public class Sala {
         this.cantidadDeColumnas = cantidadDeColumnas;
     }
 
-    public Butaca getMatrizButacas() {
+    public Butaca[][] getMatrizButacas() {
         return matrizButacas;
     }
 
-    public void setMatrizButacas(Butaca matrizButacas) {
+    public void setMatrizButacas(Butaca[][] matrizButacas) {
         this.matrizButacas = matrizButacas;
     }
+
+   
 
     public Integer getCapacidadMaxima() {
         return capacidadMaxima;
@@ -64,6 +67,12 @@ public class Sala {
         this.capacidadMaxima = capacidadMaxima;
     }
 
+    @Override
+    public String toString() {
+        return "Sala{" + "cantidadDeFilas=" + cantidadDeFilas + ", cantidadDeColumnas=" + cantidadDeColumnas + ", matrizButacas=" + matrizButacas + ", capacidadMaxima=" + capacidadMaxima + '}';
+    }
+
+    
    
 
 }
