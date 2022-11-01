@@ -16,7 +16,7 @@ public class ServiceCliente {
     ;
     
     
-    private Cliente crearCliente() {
+    public Cliente crearCliente() {
 
         Cliente cliente = new Cliente();
 

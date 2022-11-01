@@ -5,8 +5,9 @@
  */
 package relacionesej5;
 
-import Entity.Cuota;
-import Service.ServiceCuota;
+import Entity.Poliza;
+import Service.ServicePoliza;
+
 
 /**
  *
@@ -19,11 +20,12 @@ public class RelacionesEj5 {
      */
     public static void main(String[] args) {
         
-        ServiceCuota sC = new ServiceCuota();
+        ServicePoliza sPoliza = new ServicePoliza();
         
-        Cuota c1 =sC.crearCuota();
+        Poliza p1 = sPoliza.crearPoliza();
         
-        System.out.println(c1);
+        
+        System.out.println(p1);
         
     }
 
